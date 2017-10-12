@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="PCS1(failed)" parallel="tests">
+    <parameter name="password" value="920940"/>
+    <parameter name="semester" value="S"/>
+    <parameter name="studentNum" value="1001110415"/>
+    <parameter name="courseId" value="CSC401H1"/>
+    <classes>
+      <class name="getmycourse.CourseEnrol">
+        <methods>
+          <include name="enroll" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- getmycourse.CourseEnrol -->
+    </classes>
+  </test> <!-- PCS1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
