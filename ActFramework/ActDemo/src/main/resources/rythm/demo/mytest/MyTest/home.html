@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+@args List categories, List<List> tests, List amount
+<html lang="@_lang">
+<head>
+  <meta charset="UTF-8">
+  <title>Automation Testing</title>
+  <link rel="icon" type="img/ico" href="http://www.artsmartiauxcombat.com/images/favicon.ico-16x16-i11.ico">
+  <style>
+  	body {
+  		background-color: #554F4E;
+  	}
+  
+  	* {
+   		box-sizing: border-box;
+    	font-family: "Comic Sans MS", cursive, sans-serif;
+    	color: white;
+	}
+  
+	button {
+		width:100px; 
+    	background-color: #4CAF50;
+    	border: none;
+    	color: white;
+    	padding: 15px 32px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 2px;
+    	cursor: pointer;
+	}
+	
+	.select {
+ 		background-color: #4CAF50;   
+	}
+	
+	
+  </style>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    	crossorigin="anonymous"></script>
+   <script>
+   var select_list = new Set();
+   
+   function handleClick(e){
+       if(e != undefined){
+           var ID = e.id;
+           var find = false;
+           if(select_list.has(ID)){
+        	   select_list.delete(ID);
+           }else{
+        	   select_list.add(ID);
+           }
+           document.getElementById(ID).parentElement.classList.toggle('select');
+       }
+   }
+   
+   function doTest() {
+	   let item = [];
+	   select_list.forEach(name => item.push({name}));
+       $.ajax({
+           type : "POST",
+           url : "/work",
+           dataType : "json",
+           contentType: "application/json; charset=utf-8",
+           data: JSON.stringify({'items' : item}),
+           success : function (response) {
+               $("#result").val(response); 
+           },
+           error: function (jqXHR, error) {
+               $("#result").val(jqXHR.status); 
+           }
+       });
+   }
+   
+   </script>
+</head>
+<body>
+    <header>
+        <div class="col-2 logo " id="h1">
+            <section>
+                <h1>Echoworx Automation Testing</h1>
+            </section>
+        </div>   
+    </header>
+
+    <section class="row profile_feed">
+    
+    <ul>
+	@for(int i : amount) {
+    	<br/>
+    	<li><b>@categories.get(i)</b>
+   		<ul id=@i>
+    		@for(String name : tests.get(i)){
+    			<li>@name<input id=@name type="checkbox" onclick='handleClick(this);'></li>
+    		}
+    		</ul>
+    	</li>
+		}
+	</ul>
+    
+    <section class="row">
+		<button onclick='location.reload();'>Reset</button>
+		<button onclick='doTest();'>GO</button>
+    </section>
+	
+	<div class="form_element">
+         <label>Here is the responde:</label>
+         <textarea id="result"></textarea>
+    </div>
+</body>
+</html>

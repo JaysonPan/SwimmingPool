@@ -1,0 +1,135 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!-- this section contains tests that are full approved, partially approved, and ready for review -->
+
+<suite name="StableSuite" verbose="10" parallel="classes" thread-count="10" configfailurepolicy="continue">
+	<test name="GeneralTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.profile.crud.Emg114" />
+		<class name="com.echoworx.automation.tests.profile.crud.Emg115" />
+	  </classes>
+	</test>
+ 	<test name="PDFAttachmentTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.systemflows.pdfattachments.Ow1" />
+		<class name="com.echoworx.automation.tests.systemflows.pdfattachments.Ow2" />
+		<class name="com.echoworx.automation.tests.systemflows.pdfattachments.Ow4" />
+	  </classes>
+	</test>
+	<test name="PDFFullBodyTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.systemflows.pdfullbdy.Ow9" />
+		<class name="com.echoworx.automation.tests.systemflows.pdfullbdy.Ow10" />
+		<class name="com.echoworx.automation.tests.systemflows.pdfullbdy.Ow11" /> 
+		<class name="com.echoworx.automation.tests.systemflows.pdfullbdy.Ow12" /> 
+	  </classes>
+	</test>
+	<test name="PortalPickupTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.systemflows.webportalpickup.Ow16" />
+ 		<class name="com.echoworx.automation.tests.systemflows.webportalpickup.Ow13" />
+ 		<class name="com.echoworx.automation.tests.systemflows.webportalpickup.Ow14" />
+ 		<class name="com.echoworx.automation.tests.systemflows.webportalpickup.Ow15" />
+	  </classes>
+	</test>
+	<test name="DefaultProfileRegexTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.defaultpolicies.regex.Emg873" />
+		<class name="com.echoworx.automation.tests.defaultpolicies.regex.Emg738" />
+	  </classes>
+	</test>
+	<test name="PolicyActionTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.policyactions.emailhdractions.Emg736" />
+		<class name="com.echoworx.automation.tests.policyactions.emailhdractions.Emg857" />
+	  </classes>
+	</test>
+	<test name="PSKEncodingTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg452" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg451" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg462" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg463" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg468A" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg468B" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg466" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg450" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg453" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg454" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg455" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg456" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg457" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg458" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg460" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg461" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg459A" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg459B" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg459C" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg459D" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg473" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg475A" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg475B" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg475C" />
+		<class name="com.echoworx.automation.tests.presharedkey.encdec.Emg475D" />
+	  </classes>
+	</test>
+	<test name="SPDFTest">
+	  <classes>
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg647" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg648" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg654" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg662" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg666" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg667" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg668" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg671" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg672" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg646" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg655" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg656" />
+        <class name="com.echoworx.automation.tests.securepdf.spdf.Emg664" />
+        <class name="com.echoworx.automation.tests.securepdf.spdf.Emg971" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg840" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg987" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg674" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg675" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg973A" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg973B" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg833A" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg833B" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg833C" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg833D" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg841" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg860" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg871" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg919A" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg919B" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg919C" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg919D" />
+		<class name="com.echoworx.automation.tests.securepdf.spdf.Emg919E" />
+	 </classes>
+	</test>
+	<test name="SenderPreferenceTest">
+	  <classes>
+	  	<class name="com.echoworx.automation.tests.senderpreference.Emg299" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg318" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg319" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg320" /> 
+		<class name="com.echoworx.automation.tests.senderpreference.Emg321" /> 
+		<class name="com.echoworx.automation.tests.senderpreference.Emg340" /> 
+		<class name="com.echoworx.automation.tests.senderpreference.Emg341" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg361" /> 
+		<class name="com.echoworx.automation.tests.senderpreference.Emg949A" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg949B" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg949C" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg949D" />
+		<class name="com.echoworx.automation.tests.senderpreference.Emg949E" />
+	  </classes>
+	</test>
+	<test name="PolicyPropertiesTest">
+		<classes>
+			<class name="com.echoworx.automation.tests.policy.properties.Emx101" />
+			<class name="com.echoworx.automation.tests.policy.properties.Emx122" />
+		</classes>
+	</test> 
+</suite>
